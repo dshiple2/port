@@ -85,7 +85,7 @@ const styles = {
         fontFamily: 'MyCustomFont, sans-serif',
         color: 'black',
         fontSize: '32px',
-        marginLeft: '-150px',
+        marginLeft: '-10%',
     },
     navLink: {
         fontSize: '14px',
