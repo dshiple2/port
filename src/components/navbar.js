@@ -98,7 +98,7 @@ const styles = {
     dynamicText: {
         fontFamily: 'MyCustomFont, sans-serif',
         fontSize: '24px',
-        color: '#ff8c10',
+        color: 'black',
         marginLeft: '10rem'
     },
 };
