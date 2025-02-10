@@ -30,6 +30,7 @@ import off_lookbook4 from "./photos/project4/off_lookbook4.png";
 import off_lookbook5 from "./photos/project4/off_lookbook5.png";
 import off_lookbook6 from "./photos/project4/off_lookbook6.png";
 import dancingwdevil from "./photos/project5/dancingwdevil.png";
+import PPP_cover from "./photos/project5/PPP_cover.png";
 import maggiemae from "./photos/project5/maggiemae.png";
 import prodigal1 from "./photos/project5/prodigal1.png";
 import bcards from "./photos/project6/bcards.png";
@@ -39,6 +40,7 @@ import speakergraphic1 from "./photos/project6/speakergraphic1.png";
 import speakers from "./photos/project6/speakers.png";
 import stationery from "./photos/project6/stationery.png";
 import  webapplication from "./photos/project6/webapplication.png";
+import bigtime from "./photos/project6/bigtime.png";
 
 function App() {
     const [visibleImage, setVisibleImage] = useState('');
@@ -85,15 +87,6 @@ function App() {
                     book6
                 ]}/>
             </div>
-            <div id="meadowGold" style={{marginTop: '1rem'}} className="observed-section">
-                <ImageCarousel images={[
-                    meadowgold,
-                    meadowgold2,
-                    meadowgold3,
-                    meadowgold4,
-                    meadowgold5
-                ]}/>
-            </div>
             <div id="magazine" style={{marginTop: '1rem'}} className="observed-section">
                 <ImageCarousel images={[
                     magazing_cover1,
@@ -117,22 +110,34 @@ function App() {
                     lastspreadpsd
                 ]}/>
             </div>
+    
             <div id="prodigal" style={{marginTop: '1rem'}} className="observed-section">
                 <ImageCarousel images={[
+                    PPP_cover,
                     dancingwdevil,
                     maggiemae,
-                    prodigal1
+                    prodigal1 
                 ]}/>
             </div>
-            <div id="branding" style={{marginTop: '1rem', marginBottom: '-40rem'}} className="observed-section">
+            <div id="branding" style={{marginTop: '1rem'}} className="observed-section">
                 <ImageCarousel images={[
                     bcards,
                     box1,
                     box2,
                     speakergraphic1,
                     speakers,
+                    bigtime,
                     stationery,
                     webapplication
+                ]}/>
+            </div>
+            <div id="meadowGold" style={{marginTop: '1rem', marginBottom: '5rem'}} className="observed-section">
+                <ImageCarousel images={[
+                    meadowgold,
+                    meadowgold2,
+                    meadowgold3,
+                    meadowgold4,
+                    meadowgold5
                 ]}/>
             </div>
         </>
@@ -142,12 +147,12 @@ function App() {
 const styles = {
     imageContainer: {
         position: 'relative',
-        marginBottom: '50rem'
+        marginBottom: '20rem'
     },
     image: {
-        width: '100%',
+        width: '85%',
         marginTop: '-10rem',
-        maxWidth: '600px',
+        maxWidth: '500px',
         marginBottom: '2rem',
         display: 'block',
         marginLeft: 'auto',

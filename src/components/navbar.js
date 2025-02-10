@@ -1,7 +1,8 @@
 import React from 'react';
 import {Navbar, Nav, Container} from 'react-bootstrap';
 import chain from '../photos/chain.png';
-
+import smallerchainbar from "../photos/smallerchainbar.png";
+import smallerchainbar2 from "../photos/smallerchainbar2.png";
 
 const NavbarComponent = ({ visibleImage }) => {
     const getDynamicText = () => {
@@ -41,8 +42,8 @@ const NavbarComponent = ({ visibleImage }) => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            <img src={chain} alt="Navbar Border"
-                 style={{top: '-1200px', marginLeft: '-1040px', width: '3200px', position: "absolute", pointerEvents: 'none'}}/>
+            <img src={smallerchainbar2} alt="Navbar Border"
+                 style={{top: '50px', marginLeft: '-30px', width: '1800px', position: "absolute", pointerEvents: 'none'}}/>
         </div>
     )
 };
@@ -85,7 +86,7 @@ const styles = {
         fontFamily: 'MyCustomFont, sans-serif',
         color: 'black',
         fontSize: '32px',
-        marginLeft: '-10%',
+        marginLeft: '-55%',
     },
     navLink: {
         fontSize: '14px',
@@ -97,7 +98,7 @@ const styles = {
     dynamicText: {
         fontFamily: 'MyCustomFont, sans-serif',
         fontSize: '24px',
-        color: 'black',
+        color: '#ff8c10',
         marginLeft: '10rem'
     },
 };

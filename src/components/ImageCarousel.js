@@ -3,11 +3,11 @@ import { useMemo, useState } from "react";
 const styles = {
     imageContainer: {
         position: 'relative',
-        marginBottom: '50rem'
+        marginBottom: '25rem'
     },
     image: {
         width: '100%',
-        maxWidth: '1000px',
+        maxWidth: '1175px',
         marginBottom: '2rem',
         display: 'block',
         marginLeft: 'auto',
