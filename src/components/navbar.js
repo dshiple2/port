@@ -51,7 +51,7 @@ const NavbarComponent = ({ visibleImage }) => {
 const styles = {
     stickyNavbar: {
         position: 'sticky',
-        top: 75,
+        top: 10,
         zIndex: 999,
         width: '100%',
         padding: '1rem 0',
