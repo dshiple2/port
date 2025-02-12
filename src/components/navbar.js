@@ -43,7 +43,7 @@ const NavbarComponent = ({ visibleImage }) => {
                 </Container>
             </Navbar>
             <img src={smallerchainbar2} alt="Navbar Border"
-                 style={{top: '50px', marginLeft: '-30px', width: '1800px', position: "absolute", pointerEvents: 'none'}}/>
+                 style={{top: '35px', marginLeft: '-30px', width: '1510px', position: "absolute", pointerEvents: 'none'}}/>
         </div>
     )
 };
@@ -85,8 +85,9 @@ const styles = {
     brandText: {
         fontFamily: 'MyCustomFont, sans-serif',
         color: 'black',
-        fontSize: '32px',
+        fontSize: '24px',
         marginLeft: '-55%',
+        // marginBottom: '0%',
     },
     navLink: {
         fontSize: '14px',
@@ -100,6 +101,7 @@ const styles = {
         fontSize: '24px',
         color: 'black',
         marginLeft: '10rem'
+        
     },
 };
 
