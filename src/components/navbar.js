@@ -46,8 +46,7 @@ const NavbarComponent = ({ visibleImage }) => {
             fontFamily: 'MyCustomFont, sans-serif',
             color: 'black',
             fontSize: isMobile ? '18px' : '24px',
-            width: '200px',
-            marginLeft: isMobile ? '3rem': '0'
+            width: '200px'
          },
         dynamicText: {
             fontFamily: 'MyCustomFont, sans-serif',
@@ -67,7 +66,7 @@ const NavbarComponent = ({ visibleImage }) => {
             <img 
                 src={smallerchainbar2} 
                 alt="Navbar Border" 
-                style={{ top: '25px', marginLeft: '-30px', width: '1510px', position: "absolute", pointerEvents: 'none' }} 
+                style={{ marginTop: '-25px', marginLeft: '-30px', width: '1510px', position: "absolute", pointerEvents: 'none' }} 
             />
         </div>
     );
