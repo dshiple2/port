@@ -68,6 +68,7 @@ export default function ImageCarousel({ images = [] }) {
                 style={styles.image}
                 alt={`Image ${currentIndex}`}
                 className="w-full h-full object-cover"
+                loading="lazy"
             />
         </div>
     );
