@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
 import smallerchainbar2 from "../photos/smallerchainbar2.png";
 
 const NavbarComponent = ({ visibleImage }) => {
@@ -43,59 +42,33 @@ const NavbarComponent = ({ visibleImage }) => {
             border: "20px solid transparent",
             borderTop: '#333',
         },
-        navLine: {
-            height: '1px',
-            backgroundColor: '#333',
-            width: '100%',
-        },
-        navLine2: {
-            height: '1px',
-            backgroundColor: '#333',
-            width: '100%',
-            marginTop: '9rem',
-        },
-        nav: {
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start',
-            justifyContent: 'flex-start',
-        },
         brandText: {
             fontFamily: 'MyCustomFont, sans-serif',
             color: 'black',
             fontSize: isMobile ? '18px' : '24px',
-            marginLeft: isMobile ? '0' : '-55%'
-        },
-        navLink: {
-            fontSize: '14px',
-            padding: '0.25rem 0',
-            marginBottom: '0.25rem',
-            lineHeight: '1.2',
-            marginLeft: '-10px',
-        },
+            width: '200px',
+            marginLeft: isMobile ? '3rem': '0'
+         },
         dynamicText: {
             fontFamily: 'MyCustomFont, sans-serif',
             fontSize: isMobile ? '18px' : '24px',
             color: 'black',
-            marginLeft: isMobile ? '8rem' : '10rem',
-            marginTop: isMobile ? '-50px' : '0'
+            marginLeft: isMobile ? '-5rem' : '10rem',
+            width: isMobile ? '300px': '1000px'
         },
     };
 
     return (
         <div style={styles.stickyNavbar}>
-            <Navbar expand="lg" expanded={true}>
-                <Container>
-                    <Navbar.Collapse id="navbar-nav">
-                        <Nav className="ml-auto" style={styles.nav}>
-                            <Navbar.Text style={styles.brandText}>Davis Dial</Navbar.Text>
-                        </Nav>
-                        <div style={styles.dynamicText}>{getDynamicText()}</div>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
-            <img src={smallerchainbar2} alt="Navbar Border"
-                 style={{ top: '35px', marginLeft: '-30px', width: '1510px', position: "absolute", pointerEvents: 'none' }} />
+            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                <div style={styles.brandText}>Davis Dial</div>
+                <div style={styles.dynamicText}>{getDynamicText()}</div>
+            </div>
+            <img 
+                src={smallerchainbar2} 
+                alt="Navbar Border" 
+                style={{ top: '25px', marginLeft: '-30px', width: '1510px', position: "absolute", pointerEvents: 'none' }} 
+            />
         </div>
     );
 };
