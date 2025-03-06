@@ -41,32 +41,48 @@ const NavbarComponent = ({ visibleImage }) => {
             transform: 'rotate(-7deg)',
             border: "20px solid transparent",
             borderTop: '#333',
+            mixBlendMode: 'difference',  // Core effect
+            pointerEvents: 'none'
+        },
+        textContainer: {
+            display: 'flex', 
+            flexDirection: 'row', 
+            alignItems: 'center',
+            background: 'transparent',  // No background so it blends with page content
         },
         brandText: {
             fontFamily: 'MyCustomFont, sans-serif',
-            color: 'black',
+            color: 'white',  // White works best for "difference"
             fontSize: isMobile ? '18px' : '24px',
-            width: '200px'
+            width: '200px',
+            mixBlendMode: 'difference'
          },
         dynamicText: {
             fontFamily: 'MyCustomFont, sans-serif',
             fontSize: isMobile ? '18px' : '24px',
-            color: 'black',
+            color: 'white',  // White works best for "difference"
             marginLeft: isMobile ? '-5rem' : '10rem',
-            width: isMobile ? '300px': '1000px'
-        },
+            width: isMobile ? '300px': '1000px',
+            mixBlendMode: 'difference'
+        }
     };
 
     return (
         <div style={styles.stickyNavbar}>
-            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                <div style={styles.brandText}>Davis Dial</div>
+            <div style={styles.textContainer}>
+                <p style={styles.brandText}>Davis Dial</p>
                 <div style={styles.dynamicText}>{getDynamicText()}</div>
             </div>
             <img 
-                src={smallerchainbar2} 
+                src={smallerchainbar2}
                 alt="Navbar Border" 
-                style={{ marginTop: '-25px', marginLeft: '-30px', width: '1510px', position: "absolute", pointerEvents: 'none' }} 
+                style={{ 
+                    marginTop: '-25px', 
+                    marginLeft: '-30px', 
+                    width: '1510px', 
+                    position: "absolute",
+                    filter: 'brightness(10) contrast(10)'
+                }} 
             />
         </div>
     );
