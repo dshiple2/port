@@ -40,7 +40,6 @@ import speakers from "./photos/project6/speakers.png";
 import stationery from "./photos/project6/stationery.png";
 import  webapplication from "./photos/project6/webapplication.png";
 import bigtime from "./photos/project6/bigtime.png";
-import web_hero2 from "./photos/web_hero2.mp4"
 
 function App() {
     const [visibleImage, setVisibleImage] = useState('');
@@ -81,7 +80,7 @@ function App() {
                   muted
                   playsInline
                   style={{width: '100%', height: '100%', objectFit: 'cover'}}>
-                    <source src={web_hero2} type="video/mp4"/>
+                    <source src="/web_hero2.mp4" type="video/mp4"/>
                   </video>
             </div>
             <div id="books" style={{marginTop: '10rem'}} className="observed-section">
