@@ -53,7 +53,7 @@ const NavbarComponent = ({ visibleImage }) => {
         },
         brandText: {
             fontFamily: 'MyCustomFont, sans-serif',
-            color: isMobile ? 'lightgrey' : 'white',  // White works best for "difference"
+            color: isMobile ? '#767676' : 'white',  // White works best for "difference"
             fontSize: isMobile ? '18px' : '24px',
             width: '200px',
             mixBlendMode: 'difference'
@@ -61,7 +61,7 @@ const NavbarComponent = ({ visibleImage }) => {
         dynamicText: {
             fontFamily: 'MyCustomFont, sans-serif',
             fontSize: isMobile ? '18px' : '24px',
-            color: isMobile ? 'lightgrey' : 'white',  // White works best for "difference"
+            color: isMobile ? '#767676' : 'white',  // White works best for "difference"
             marginLeft: isMobile ? '-5rem' : '10rem',
             width: isMobile ? '300px': '1000px',
             mixBlendMode: 'difference'
@@ -71,7 +71,7 @@ const NavbarComponent = ({ visibleImage }) => {
     return (
         <div style={styles.stickyNavbar}>
             <div style={styles.textContainer}>
-                <p style={styles.brandText}>Davis Dial</p>
+                <div style={styles.brandText}>Davis Dial</div>
                 <div style={styles.dynamicText}>{getDynamicText()}</div>
             </div>
             <img 
