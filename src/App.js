@@ -40,7 +40,6 @@ import speakers from "./photos/project6/speakers.png";
 import stationery from "./photos/project6/stationery.png";
 import  webapplication from "./photos/project6/webapplication.png";
 import bigtime from "./photos/project6/bigtime.png";
-import web_heroV2 from "./photos/web_heroV2.mp4"
 
 function App() {
     const [visibleImage, setVisibleImage] = useState('');
@@ -74,16 +73,6 @@ function App() {
     return (
         <>
             <NavbarComponent visibleImage={visibleImage}/>
-            <div id="vid" style={{ width: '100%', height:'800px', justifyContent: 'center', marginTop: '-10rem'}} className="observed-section">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  style={{width: '100%', height: '100%', objectFit: 'cover'}}>
-                    <source src={web_heroV2} type="video/mp4"/>
-                  </video>
-            </div>
             <div id="books" style={{marginTop: '10rem'}} className="observed-section">
                 <ImageCarousel images={[
                     book,
