@@ -53,7 +53,7 @@ const NavbarComponent = ({ visibleImage }) => {
         },
         brandText: {
             fontFamily: 'MyCustomFont, sans-serif',
-            color: isMobile ? 'grey' : 'white',  // White works best for "difference"
+            color: isMobile ? 'lightgrey' : 'white',  // White works best for "difference"
             fontSize: isMobile ? '18px' : '24px',
             width: '200px',
             mixBlendMode: 'difference'
@@ -61,7 +61,7 @@ const NavbarComponent = ({ visibleImage }) => {
         dynamicText: {
             fontFamily: 'MyCustomFont, sans-serif',
             fontSize: isMobile ? '18px' : '24px',
-            color: isMobile ? 'grey' : 'white',  // White works best for "difference"
+            color: isMobile ? 'lightgrey' : 'white',  // White works best for "difference"
             marginLeft: isMobile ? '-5rem' : '10rem',
             width: isMobile ? '300px': '1000px',
             mixBlendMode: 'difference'
