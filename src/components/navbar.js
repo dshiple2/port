@@ -49,10 +49,11 @@ const NavbarComponent = ({ visibleImage }) => {
             flexDirection: 'row', 
             alignItems: 'center',
             background: 'transparent',  // No background so it blends with page content
+            filter: isMobile ? 'invert(1)' : 'none'  // Apply invert filter for mobile
         },
         brandText: {
             fontFamily: 'MyCustomFont, sans-serif',
-            color: 'white',  // White works best for "difference"
+            color: isMobile ? 'grey' : 'white',  // White works best for "difference"
             fontSize: isMobile ? '18px' : '24px',
             width: '200px',
             mixBlendMode: 'difference'
@@ -60,7 +61,7 @@ const NavbarComponent = ({ visibleImage }) => {
         dynamicText: {
             fontFamily: 'MyCustomFont, sans-serif',
             fontSize: isMobile ? '18px' : '24px',
-            color: 'white',  // White works best for "difference"
+            color: isMobile ? 'grey' : 'white',  // White works best for "difference"
             marginLeft: isMobile ? '-5rem' : '10rem',
             width: isMobile ? '300px': '1000px',
             mixBlendMode: 'difference'
