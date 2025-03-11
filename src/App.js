@@ -40,10 +40,13 @@ import speakers from "./photos/project6/speakers.png";
 import stationery from "./photos/project6/stationery.png";
 import  webapplication from "./photos/project6/webapplication.png";
 import bigtime from "./photos/project6/bigtime.png";
-import web_hero2V3 from "./photos/web_hero2V3.mp4"
+import web_hero2V3 from "./photos/web_hero2V3.mp4";
+import IMG_1045 from "./photos/IMG_1045.png";
+import Button from 'react-bootstrap/Button';
 
 function App() {
     const [visibleImage, setVisibleImage] = useState('');
+    const [aboutOpen, setIsAboutOpen] = useState(false);
 
     // IntersectionObserver callback
     const handleVisibilityChange = (entries) => {
@@ -71,19 +74,63 @@ function App() {
         };
     }, []);
 
+    if (aboutOpen) {
+        return (
+            <div style={{ width: '100%', height:'800px', justifyContent: 'center', marginTop: '-10rem'}} className="observed-section">
+                <img
+                    src={IMG_1045}
+                    style={styles.image}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                />
+                <Button 
+                    variant="outline-dark" 
+                    onClick={() => setIsAboutOpen(false)}
+                    style={{
+                        position: 'absolute', 
+                        top: '1rem',  // Adjust as needed
+                        right: '20px',  // Adjust as needed
+                        zIndex: 10,  // Ensure it's above the video
+                        padding: '10px 20px', 
+                        fontSize: '16px'
+                    }}
+                >
+                    Portfolio
+                </Button>
+            </div>
+        )
+    }
+
     return (
         <>
             <NavbarComponent visibleImage={visibleImage}/>
-            <div id="vid" style={{ width: '100%', height:'800px', justifyContent: 'center', marginTop: '-10rem'}} className="observed-section">
+            <div id="vid" style={{ position: 'relative', width: '100%', height: '800px', justifyContent: 'center', marginTop: '-10rem' }} className="observed-section">
                 <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  style={{width: '100%', height: '100%', objectFit: 'cover'}}>
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}>
                     <source src={web_hero2V3} type="video/mp4"/>
-                  </video>
+                </video>
+                
+                {/* About Button Positioned at Top Right */}
+                <Button 
+                    variant="outline-light" 
+                    onClick={() => setIsAboutOpen(true)}
+                    style={{
+                        position: 'absolute', 
+                        top: '10rem',  // Adjust as needed
+                        right: '20px',  // Adjust as needed
+                        zIndex: 10,  // Ensure it's above the video
+                        padding: '10px 20px', 
+                        fontSize: '16px'
+                    }}
+                >
+                    About
+                </Button>
             </div>
+
             <div id="books" style={{marginTop: '10rem'}} className="observed-section">
                 <ImageCarousel images={[
                     book,
@@ -158,13 +205,12 @@ const styles = {
     },
     image: {
         width: '85%',
-        marginTop: '-10rem',
-        maxWidth: '500px',
+        marginTop: '10rem',
+        maxWidth: '1000px',
         marginBottom: '2rem',
         display: 'block',
         marginLeft: 'auto',
         marginRight: 'auto',
-        transform: 'rotate(40deg)'
         },
     };
 
